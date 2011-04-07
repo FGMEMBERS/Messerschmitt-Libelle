@@ -1,3 +1,3 @@
-aircraft.livery.init("Aircraft/Bell-P-59/Models/Liveries");
+aircraft.livery.init("Aircraft/Messerschmitt-Libelle/Models/Liveries");
 
 
