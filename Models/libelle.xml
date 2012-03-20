@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Messerschmitt-Libelle/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -70,10 +84,11 @@
     <object-name>axeD</object-name>
     <object-name>roueD</object-name>
     <object-name>trous</object-name>
+    <object-name>guns</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>texture.png</texture>
+    <texture>VooDoo-Libelle.png</texture>
 <!--
     <diffuse>
       <red-prop>diffuse/red</red-prop>
@@ -161,19 +176,42 @@
     </condition>
   </animation>
 
-  <!-- Interieur -->
-  <model>
-    <path>Aircraft/Messerschmitt-Libelle/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Messerschmitt-Libelle/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.850 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Interieur -->
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- Effets de tir -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -3.164 </x-m>
+      <y-m> -0.422 </y-m>
+      <z-m> -0.301 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -3.164 </x-m>
+      <y-m>  0.422 </y-m>
+      <z-m> -0.301 </z-m>
+      <pitch-deg> 180 </pitch-deg>
+    </offsets>
   </model>
 
   <!-- Effets sur le sol -->
@@ -618,5 +656,103 @@
       <z2-m> -0.196 </z2-m>
     </axis>
   </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>roueA</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -3.972 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.796 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueG</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -1.749 </x-m>
+      <y-m> -0.672 </y-m>
+      <z-m> -0.758 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>roueD</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -1.749 </x-m>
+      <y-m>  0.672 </y-m>
+      <z-m> -0.758 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 1.451 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.570 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m> -0.693 </x-m>
+      <y-m> -3.489 </y-m>
+      <z-m> -0.037 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.660 </x-m>
+      <y-m> -3.489 </y-m>
+      <z-m> -0.037 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -0.693 </x-m>
+      <y-m>  3.489 </y-m>
+      <z-m> -0.037 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeWhite.xml</path>
+    <offsets>
+      <x-m> -0.660 </x-m>
+      <y-m>  3.489 </y-m>
+      <z-m> -0.037 </z-m>
+    </offsets>
+  </model>
 
 </PropertyList>

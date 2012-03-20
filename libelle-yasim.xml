@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Messerschmitt Me P 1101 : 2010 BARANGER Emmanuel
+<!-- Messerschmitt Libelle : 2010 BARANGER Emmanuel
+                   updated : 2012 VooDoo
 
      source          : http://www.luft46.com/mess/melibel.html
                        http://aviation-militaire.kazeo.com/Avions-allemands/Messerschmitt-P-1101,a1746670.html
@@ -43,11 +44,14 @@
         sweep="37"
         camber="0.01">
         <stall aoa="16" width="1" peak="1.2"/>
-        <flap0 start="0.05" end="1" lift="1.1" drag="1.0"/>
+        <flap0 start="0.05" end="1" lift="1.1" drag="5.5"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/> 
 
         <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+
+        <control-speed control="EXTEND" transition-time="9"/>
+
    </mstab>
 
   <wing x="0.986" y="1.528" z="-0.048"
@@ -134,7 +138,7 @@
   <!-- Undercarriage -->
   <!-- nose -->
   <gear x="3.972" y="0" z="-0.956"
-        retract-time="7"
+        retract-time="8"
         compression="0.30"
         spring="1"
         damp="2" >
@@ -143,12 +147,12 @@
 
         <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
+        <control-speed control="EXTEND" transition-time="8"/>
   </gear>
 
   <!-- left main -->
   <gear x="1.749" y="0.672" z="-0.971"
-        retract-time="7"
+        retract-time="8"
         compression="0.30"
         spring="1"
         damp="2" >
@@ -158,12 +162,12 @@
 
         <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
+        <control-speed control="EXTEND" transition-time="8"/>
   </gear>
 
   <!-- right main -->
   <gear x="1.749" y="-0.672" z="-0.971"
-        retract-time="7"
+        retract-time="8"
         compression="0.30"
         spring="1"
         damp="2" >
@@ -173,7 +177,7 @@
 
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
 
-        <control-speed control="EXTEND" transition-time="7"/>
+        <control-speed control="EXTEND" transition-time="8"/>
   </gear>
 
   <!-- Internal tanks 370 liter -->
@@ -182,8 +186,8 @@
   <weight x="2.834" y="0" z="0.093" mass-prop="/yasim/Messerschmitt-Libelle/pilot-lb"/>
 
   <!-- Mass distribution -->
-  <ballast x="3" y="0" z="-2" mass="500"/>
-  <ballast x="-2" y="0" z="1" mass="-400"/>
+  <ballast x=" 3" y="0" z="-2" mass=" 500"/>
+  <ballast x="-2" y="0" z=" 1" mass="-400"/>
+  <ballast x=" 3" y="0" z=" 0" mass=" 700"/>
 
 </airplane>
-
