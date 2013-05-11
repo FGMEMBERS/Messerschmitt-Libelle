@@ -6,8 +6,8 @@ English/Français
 A little history
 ================
 
-Messerschmitt Me P.1101
-=======================
+Messerschmitt Libelle
+=====================
 
 Manufacturer                  : 
 Type                          : 
@@ -40,8 +40,8 @@ embaranger@free.fr
 Un peu d'histoire
 =================
 
-Messerschmitt Me P.1101
-=======================
+Messerschmitt Libelle
+=====================
 
 Constructeur                  :
 Type                          :

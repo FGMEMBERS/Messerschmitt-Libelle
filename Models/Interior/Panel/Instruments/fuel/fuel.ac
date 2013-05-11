@@ -9,7 +9,7 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "colors.png"
+texture "fuel.png"
 texrep 1 1
 crease 30.000001
 numvert 163
@@ -1385,7 +1385,7 @@ name "needle"
 loc 0 0 -0
 data 6
 needle
-texture "colors.png"
+texture "fuel.png"
 texrep 1 1
 crease 30.000001
 numvert 10
@@ -1447,7 +1447,7 @@ name "panel1"
 loc 0 0 -0
 data 6
 panel1
-texture "colors.png"
+texture "fuel.png"
 texrep 1 1
 crease 30.000001
 numvert 4
@@ -1469,7 +1469,7 @@ name "panel2"
 loc 0 0 -0
 data 6
 panel2
-texture "colors.png"
+texture "fuel.png"
 texrep 1 1
 crease 30.000001
 numvert 23
@@ -1633,7 +1633,7 @@ name "visses"
 loc 0 0 -0
 data 6
 visses
-texture "colors.png"
+texture "fuel.png"
 texrep 1 1
 crease 30.000001
 numvert 736

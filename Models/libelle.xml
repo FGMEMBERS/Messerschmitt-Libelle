@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -88,40 +88,46 @@
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
-    <texture>VooDoo-Libelle.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
+    <texture>texture.png</texture>
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>derives</object-name>
+    <object-name>tailG</object-name>
+    <object-name>tailD</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
@@ -150,6 +156,15 @@
     <type>noshadow</type>
     <object-name>vitres</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+  </effect>
 
   <!-- Effacement des roues une fois les trains rentrés -->
   <animation>
@@ -188,8 +203,15 @@
 
   <!-- Interieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/Messerschmitt-Libelle/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
 
   <!-- Effets de tir -->
   <!-- Gauche -->
@@ -729,7 +751,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -0.660 </x-m>
       <y-m> -3.489 </y-m>
@@ -747,7 +769,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Messerschmitt-Libelle/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -0.660 </x-m>
       <y-m>  3.489 </y-m>

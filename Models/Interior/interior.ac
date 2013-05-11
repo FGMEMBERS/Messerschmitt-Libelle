@@ -8,7 +8,7 @@ name "cache"
 loc 0 0 -0
 data 5
 cache
-texture "colors.png"
+texture "interior.png"
 texrep 1 1
 crease 30.000001
 numvert 42
@@ -333,7 +333,7 @@ name "interieur"
 loc 0 0 -0
 data 9
 interieur
-texture "colors.png"
+texture "interior.png"
 texrep 1 1
 crease 30.000001
 numvert 626
@@ -5206,7 +5206,7 @@ name "inttour"
 loc 0 0 -0
 data 7
 inttour
-texture "colors.png"
+texture "interior.png"
 texrep 1 1
 crease 30.000001
 numvert 242

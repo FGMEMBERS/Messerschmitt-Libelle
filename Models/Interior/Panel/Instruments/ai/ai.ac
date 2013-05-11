@@ -8,7 +8,7 @@ name "ball"
 loc 0 0 -0
 data 4
 ball
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 242
@@ -1941,7 +1941,7 @@ name "ballturn"
 loc 0 0 -0
 data 8
 ballturn
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 513
@@ -5942,7 +5942,7 @@ name "barre"
 loc 0 0 -0
 data 5
 barre
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 108
@@ -6871,7 +6871,7 @@ name "barre1"
 loc 0 0 -0
 data 6
 barre1
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 4
@@ -6893,7 +6893,7 @@ name "barre2"
 loc 0 0 -0
 data 6
 barre2
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 4
@@ -6915,7 +6915,7 @@ name "faceturn"
 loc 0 0 -0
 data 8
 faceturn
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 37
@@ -7159,7 +7159,7 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 376
@@ -10227,7 +10227,7 @@ name "skypointer"
 loc 0 0 -0
 data 10
 skypointer
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 4
@@ -10249,7 +10249,7 @@ name "visses"
 loc 0 0 -0
 data 6
 visses
-texture "colors.png"
+texture "ai.png"
 texrep 1 1
 crease 30.000001
 numvert 732

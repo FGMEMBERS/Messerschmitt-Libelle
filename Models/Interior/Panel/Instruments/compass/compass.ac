@@ -8,7 +8,7 @@ name "compass"
 loc 0 0 -0
 data 7
 compass
-texture "colors.png"
+texture "compass.png"
 texrep 1 1
 crease 30.000001
 numvert 49
@@ -388,7 +388,7 @@ name "face"
 loc 0 0 -0
 data 4
 face
-texture "colors.png"
+texture "compass.png"
 texrep 1 1
 crease 30.000001
 numvert 17
@@ -512,7 +512,7 @@ name "fond"
 loc 0 0 -0
 data 4
 fond
-texture "colors.png"
+texture "compass.png"
 texrep 1 1
 crease 30.000001
 numvert 173
@@ -2090,7 +2090,7 @@ name "visses"
 loc 0 0 -0
 data 6
 visses
-texture "colors.png"
+texture "compass.png"
 texrep 1 1
 crease 30.000001
 numvert 736
