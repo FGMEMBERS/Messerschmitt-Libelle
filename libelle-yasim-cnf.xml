@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="libelle-base.xml">
+
+  <sim>
+
+    <description>Messerschmitt Libelle (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), VooDoo (FDM)</author>
+    <flight-model>yasim</flight-model>
+    <aero>libelle-yasim</aero>
+
+  </sim>
+
+  <yasim>
+    <me262>
+      <pilot-lb>128</pilot-lb>
+    </me262>
+  </yasim>
+
+</PropertyList>
